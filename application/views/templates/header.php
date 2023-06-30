@@ -20,16 +20,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="<?=base_url('fonts/icomoon/style.css')?>">
+	<link rel="stylesheet" href="<?=base_url('fonts/flaticon/font/flaticon.css')?>">
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/glightbox.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/flatpickr.min.css">
+	<link rel="stylesheet" href="<?=base_url('css/tiny-slider.css')?>">
+	<link rel="stylesheet" href="<?=base_url('css/aos.css')?>">
+	<link rel="stylesheet" href="<?=base_url('css/glightbox.min.css')?>">
+	<link rel="stylesheet" href="<?=base_url('css/style.css')?>">
+	<link rel="stylesheet" href="<?=base_url('css/flatpickr.min.css')?>">
 
 
 	<title><?= $title ?></title>
@@ -53,8 +53,8 @@
 							<a href="<?= base_url('')?>" class="logo m-0 float-start">News MultWin<span class="text-primary">.</span></a>
 						</div>
 						<div class="col-8 text-center">
-							<form action="#" class="search-form d-inline-block d-lg-none">
-								<input type="text" class="form-control" placeholder="Search...">
+							<form action="<?= base_url('')?>post/pesquisar" method="post" class="search-form d-inline-block d-lg-none">
+								<input type="text" name="busca" id="busca" class="form-control" placeholder="Search...">
 								<span class="bi-search"></span>
 							</form>
 

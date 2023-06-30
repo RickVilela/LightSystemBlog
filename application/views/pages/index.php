@@ -71,10 +71,9 @@
 				<?php foreach($posts as $post) : ?>
 					<div class="col-lg-4 mb-4">
 						<div class="post-entry-alt">
-							<a href="<?= base_url('') ?>post/<?= $post['id'] ?>" class="img-link"><img src="<?= $post['caminhoImg'] ?>" alt="Image" class="img-fluid" style="heigth: 100%; width: 100%"></a>
+							<a href="<?= base_url('') ?>post/details/<?= $post['id'] ?>" class="img-link"><img src="<?= $post['caminhoImg'] ?>" alt="Image" class="img-fluid" style="heigth: 100%; width: 100%"></a>
 							<div class="excerpt">
-								
-							
+				
 								<h2><a href="post.html"><?= $post['titulo'] ?></a></h2>
 								<div class="post-meta align-items-center text-left clearfix">
 									<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
@@ -83,7 +82,7 @@
 								</div>
 
 								<p><?= $post['descricao'] ?></p>
-								<p><a href="<?= base_url('post') ?>" class="read-more">Continuar Lendo</a></p>
+								<p><a href="<?= base_url('') ?>post/details/<?= $post['id'] ?>" class="read-more">Continuar Lendo</a></p>
 							</div>
 						</div>
 					</div>

@@ -34,7 +34,7 @@
              		<?php foreach($postsRecentes as $postsRecentes) : ?>
 								<li>
 									<a href="<?= base_url() ?>post<?= $postsRecentes['id'] ?>">
-										<img src="<?= $postsRecentes['caminhoImg'] ?>" alt="Image placeholder" class="me-4 rounded">
+										<img src="<?= base_url()?>/<?= $postsRecentes['caminhoImg'] ?>" alt="Image placeholder" class="me-4 rounded">
 										<div class="text">
 											<h4><?= $postsRecentes['titulo'] ?></h4>
 											<div class="post-meta">
@@ -74,17 +74,17 @@
     </div>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
+    <script src="<?=base_url('js/bootstrap.bundle.min.js')?>"></script>
+    <script src="<?=base_url('js/tiny-slider.js')?>"></script>
 
-    <script src="js/flatpickr.min.js"></script>
+    <script src="<?=base_url('js/flatpickr.min.js')?>"></script>
 
 
-    <script src="js/aos.js"></script>
-    <script src="js/glightbox.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="<?=base_url('js/aos.js')?>"></script>
+    <script src="<?=base_url('js/glightbox.min.js')?>"></script>
+    <script src="<?=base_url('js/navbar.js')?>"></script>
+    <script src="<?=base_url('js/counter.js')?>"></script>
+    <script src="<?=base_url('js/custom.js')?>"></script>
 
     
   </body>
