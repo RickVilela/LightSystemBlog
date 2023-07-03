@@ -13,4 +13,28 @@ class Admin extends CI_Controller {
 		$this->load->view('pages/admin', $data);
 		
 	}
+
+	public function edit()
+	{
+	
+		$this->load->model("posts_model");
+
+		$data["title"] = "Edit Posts - MultWin";
+		$data["posts"] = $this->posts_model->getPosts();
+		
+		$this->load->view('pages/posts-admin', $data);
+		
+	}
+
+	public function remove()
+	{
+	
+		$this->load->model("posts_model");
+
+		$data["title"] = "Edit Posts - MultWin";
+		$data["posts"] = $this->posts_model->getPosts();
+		
+		$this->load->view('pages/posts-admin', $data);
+		
+	}
 }

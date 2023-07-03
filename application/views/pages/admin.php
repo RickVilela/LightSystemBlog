@@ -45,17 +45,17 @@
 
     <title>Admin- Dashboard</title>
 
-    <link href="assets/img/favicon.ico" rel="icon">
-    <link href="assets/img/favicon.ico" rel="apple-touch-icon">
+    <link href="<?=base_url('assets/img/favicon.ico')?>" rel="icon">
+    <link href="<?=base_url('assets/img/favicon.ico')?>" rel="apple-touch-icon">
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('vendor/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?=base_url('css/sb-admin-2.min.css" rel="stylesheet')?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
@@ -82,7 +82,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="admin.php">
+                <a class="nav-link" href="<?=base_url('')?>admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Novo Post</span></a>
             </li>
@@ -98,7 +98,7 @@
     
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="parceiros-admin.php">
+                <a class="nav-link" href="<?=base_url('')?>admin/edit">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Posts</span></a>
             </li>
@@ -107,7 +107,7 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item">
-                <a class="nav-link" href="index.php" target="_blank">
+                <a class="nav-link" href="<?=base_url('')?>" target="_blank">
                 <i class="fa fa-external-link" aria-hidden="true"></i>
                     <span>Acessar Blog Light System</span></a>
             </li>
@@ -218,14 +218,22 @@
                                   <label for="inputEmail4" class="form-label">Titulo</label>
                                   <input type="text" class="form-control" name="titulo" id="titulo">
                                 </div>
+                               
                                 <div class="col-md-6">
-                                  <label for="inputPassword4" class="form-label">Descricao</label>
-                                  <input type="text" class="form-control" name="descricao" id="descricao">
-                                </div>
-                                <div class="col-12">
                                   <label for="inputAddress" class="form-label">Autor</label>
-                                  <input type="text" class="form-control" name="autor" id="autor" placeholder="Descrição da empresa">
+                                  <input type="text" class="form-control" name="autor" id="autor" placeholder="Autor do Post">
                                 </div>
+
+								<div class="col-md-12">
+                                  <label for="inputPassword4" class="form-label">Descricao</label>
+                                  <textarea class="form-control" name="descricao" id="descricao"></textarea>
+                                </div>
+
+								<script src="<?=base_url('ckeditor/ckeditor.js')?>"></script>
+
+								<script>
+									CKEDITOR.replace( 'descricao' );
+								</script>
                                
                                 <div class="col-md-4">
                                   <label for="inputState" class="form-label">Categoria</label>
@@ -273,45 +281,28 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?=base_url('vendor/jquery/jquery.min.js')?>"></script>
+
+    <script src="<?=base_url('vendor/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?=base_url('vendor/jquery-easing/jquery.easing.min.js')?>"></script>
+
+	<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="<?=base_url('js/sb-admin-2.min.js')?>"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="<?=base_url('vendor/chart.js/Chart.min.js')?>"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="<?=base_url('js/demo/chart-area-demo.js')?>"></script>
+    <script src="<?=base_url('js/demo/chart-pie-demo.js')?>"></script>
 
-    <script src="js/jquery-min.js"></script>
-<script src="js/admin.js"></script>
+    <script src="<?=base_url('js/jquery-min.js')?>"></script>
+<script src="<?=base_url('js/admin.js')?>"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>

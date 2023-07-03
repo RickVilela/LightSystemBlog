@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row align-items-stretch retro-layout">
 				<div class="col-md-4">
-					<a href="<?= base_url('') ?>post/details/4" class="h-entry mb-30 v-height gradient">
+					<a href="<?= base_url('') ?>post/details/4" class="h-entry mb-30 v-height gradient" data-toggle="modal" data-src="https://www.youtube.com/embed/JJUo8Fe3_JY" data-target="#myModal">
 
 						<div class="featured-img" style="background-image: url('images/img_consulta.jfif'); background-size: contain;"></div>
 
@@ -75,9 +75,8 @@
 							<a href="<?= base_url('') ?>post/details/<?= $post['id'] ?>" class="img-link"><img src="<?= $post['caminhoImg'] ?>" alt="Image" class="img-fluid" style="heigth: 100%; width: 100%"></a>
 							<div class="excerpt">
 				
-								<h2><a href="post.html"><?= $post['titulo'] ?></a></h2>
+								<h2><a href="<?= base_url('') ?>post/details/<?= $post['id'] ?>"><?= $post['titulo'] ?></a></h2>
 								<div class="post-meta align-items-center text-left clearfix">
-									<figure class="author-figure mb-0 me-3 float-start"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
 									<span class="d-inline-block mt-1">Por <a href="#"><?= $post['autor'] ?></a></span>
 									<span>&nbsp;-&nbsp; <?= $post['data'] ?></span>
 								</div>

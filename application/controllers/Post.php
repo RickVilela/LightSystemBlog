@@ -56,6 +56,14 @@ class Post extends CI_Controller {
 		$data["comentarios"] = $this->comentarios_model->addComentario($comentario);
 	}
 
+	public function getComentarios($id)
+	{
+		$this->load->model("comentarios_model");
+	
+		$comentarios = $this->comentarios_model->getComentarios($id);
+		echo json_encode($comentarios);
+	}
+
 	
 
 }

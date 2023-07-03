@@ -46,7 +46,7 @@
               <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentário</h3>
               <ul class="comment-list">
             <?php }else{?>
-              <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentário</h3>
+              <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentários</h3>
               <ul class="comment-list">
               <?php };?>
             <?php foreach($comentarios as $comentario) : ?>

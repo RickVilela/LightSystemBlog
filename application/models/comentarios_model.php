@@ -4,7 +4,7 @@ class Comentarios_model extends CI_Model {
 
 	public function addComentario($comentario)
 	{
-		$this->db->insert("comentarios", $comentario);
+		echo $this->db->insert("comentarios", $comentario);
 	}
     
     public function getComentarios($id)

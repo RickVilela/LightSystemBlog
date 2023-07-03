@@ -33,7 +33,7 @@
 							<ul>
              		<?php foreach($postsRecentes as $postsRecentes) : ?>
 								<li>
-									<a href="<?= base_url() ?>post<?= $postsRecentes['id'] ?>">
+									<a href="<?= base_url() ?>post/details/<?= $postsRecentes['id'] ?>">
 										<img src="<?= base_url()?>/<?= $postsRecentes['caminhoImg'] ?>" alt="Image placeholder" class="me-4 rounded">
 										<div class="text">
 											<h4><?= $postsRecentes['titulo'] ?></h4>
@@ -84,7 +84,5 @@
     <script src="<?=base_url('js/custom.js')?>"></script>
 	<script src="<?=base_url('js/jquery-min.js')?>"></script>
 	<script src="<?=base_url('js/comments.js')?>"></script>
-
-    
   </body>
   </html>
