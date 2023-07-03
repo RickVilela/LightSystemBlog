@@ -39,18 +39,26 @@
 
 
           <div class="pt-5 comment-wrap">
-            <h3 class="mb-5 heading">6 Comentarios</h3>
-            <ul class="comment-list">
-
+            <?php if($qtdComentarios == 0){ ?>
+              <h3 class="mb-5 heading">Nenhum Comentário</h3>
+              <ul class="comment-list">
+            <?php }else if($qtdComentarios == 1){ ?>
+              <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentário</h3>
+              <ul class="comment-list">
+            <?php }else{?>
+              <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentário</h3>
+              <ul class="comment-list">
+              <?php };?>
+            <?php foreach($comentarios as $comentario) : ?>
               <li class="comment">
                 <div class="comment-body">
-                  <h3>Jean Doe</h3>
-                  <div class="meta">January 9, 2018 at 2:21pm</div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                  <h3><?=$comentario['nome'] ?></h3>
+                  <div class="meta"><?=$comentario['data'] ?></div>
+                  <p><?=$comentario['comentario'] ?></p>
                   <p><a href="#" class="reply rounded">Reply</a></p>
                 </div>
               </li>
-
+            <?php endforeach; ?>
             </ul>
             <!-- END comment-list -->
 
@@ -71,9 +79,9 @@
                   <textarea name="comentario" id="comentario" cols="30" rows="10" class="form-control" required></textarea>
                 </div>
                 <div class="form-group">
-                  <input type="submit" value="Comentar" class="btn btn-primary">
+                  <input type="submit" id="btnComentar" value="Comentar" class="btn btn-primary">
                 </div>
-
+                
               </form>
             </div>
           </div>
@@ -112,28 +120,3 @@
       </div>
     </div>
   </section>
-
-
-  <!-- Start posts-entry -->
-  <section class="section posts-entry posts-entry-sm bg-light">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-12 text-uppercase text-black">Outros Posts</div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="blog-entry">
-            <span class="date">Apr. 14th, 2022</span>
-            <h2><a href="post.html">Thought you loved Python? Wait until you meet Rust</a></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p><a href="#" class="read-more">Continue Reading</a></p>
-          </div>
-        </div>
-       
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End posts-entry -->
-
- 

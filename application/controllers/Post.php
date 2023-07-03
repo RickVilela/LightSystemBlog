@@ -22,6 +22,7 @@ class Post extends CI_Controller {
 
 		$data["postid"] = $this->posts_model->details($id);
 		$data["comentarios"] = $this->comentarios_model->getComentarios($id);
+		$data["qtdComentarios"] = $this->comentarios_model->getQtdComentarios($id);
 		$data["posts"] = $this->posts_model->getPosts();
 		$data["postsRecentes"] = $this->posts_recentes_model->getRecentPosts();
 		$data["title"] = "Detalhes - Post";
@@ -35,7 +36,7 @@ class Post extends CI_Controller {
 	{
 		$this->load->model("busca_model");
 	
-		$data["title"] = "Busca - Post";
+		$data["title"] = "Resultado da pesquisa por ". $_POST["busca"] ."";
 		$data["resultado"] = $this->busca_model->buscar($_POST);
 
         $this->load->view('templates/header', $data);
@@ -49,9 +50,12 @@ class Post extends CI_Controller {
 		$this->load->model("comentarios_model");
 		$this->load->model("posts_model");
 
+	
+		$comentario["id_post"] = $this->uri->segment(4);
 		$comentario = $_POST;
-		$comentario['id_post'] = [''];
 		$data["comentarios"] = $this->comentarios_model->addComentario($comentario);
 	}
+
+	
 
 }

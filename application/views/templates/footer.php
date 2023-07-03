@@ -58,7 +58,7 @@
               **==========
             -->
 
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed by <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. Todos os Direitos Reservados. &mdash; Desenvolvido por Light System Software</a> 
             </p>
           </div>
         </div>
@@ -73,18 +73,17 @@
     	</div>
     </div>
 
-
+	
     <script src="<?=base_url('js/bootstrap.bundle.min.js')?>"></script>
     <script src="<?=base_url('js/tiny-slider.js')?>"></script>
-
     <script src="<?=base_url('js/flatpickr.min.js')?>"></script>
-
-
     <script src="<?=base_url('js/aos.js')?>"></script>
     <script src="<?=base_url('js/glightbox.min.js')?>"></script>
     <script src="<?=base_url('js/navbar.js')?>"></script>
     <script src="<?=base_url('js/counter.js')?>"></script>
     <script src="<?=base_url('js/custom.js')?>"></script>
+	<script src="<?=base_url('js/jquery-min.js')?>"></script>
+	<script src="<?=base_url('js/comments.js')?>"></script>
 
     
   </body>

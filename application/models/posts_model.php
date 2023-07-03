@@ -13,4 +13,5 @@ class Posts_model extends CI_Model {
 			"id" => $id
 		))->row_array();
 	}
+
 }

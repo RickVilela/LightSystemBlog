@@ -1,9 +1,9 @@
-<!-- Start retroy layout blog posts -->
+<!-- #ff3434 -->
 	<section class="section bg-light">
 		<div class="container">
 			<div class="row align-items-stretch retro-layout">
 				<div class="col-md-4">
-					<a href="post.html" class="h-entry mb-30 v-height gradient">
+					<a href="<?= base_url('') ?>post/details/4" class="h-entry mb-30 v-height gradient">
 
 						<div class="featured-img" style="background-image: url('images/img_consulta.jfif'); background-size: contain;"></div>
 
@@ -12,7 +12,7 @@
 							<h2>Consultar dados do Veículo através da Placa</h2>
 						</div>
 					</a>
-					<a href="post.html" class="h-entry v-height gradient">
+					<a href="<?= base_url('') ?>post/details/5" class="h-entry v-height gradient">
 
 						<div class="featured-img" style="background-image: url('images/cenprot.svg'); background-size: contain;"></div>
 
@@ -23,7 +23,7 @@
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="post.html" class="h-entry img-5 h-100 gradient">
+					<a href="<?= base_url('') ?>post/details/3" class="h-entry img-5 h-100 gradient">
 
 						<div class="featured-img" style="background-image: url('images/5132329.jpg'); background-size: contain;"></div>
 
@@ -34,7 +34,7 @@
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="post.html" class="h-entry mb-30 v-height gradient">
+					<a href="<?= base_url('') ?>post/details/4" class="h-entry mb-30 v-height gradient">
 
 						<div class="featured-img" style="background-image: url('images/img_3_horizontal.jpg');"></div>
 
@@ -43,7 +43,7 @@
 							<h2>Startup vs corporate: What job suits you best?</h2>
 						</div>
 					</a>
-					<a href="post.html" class="h-entry v-height gradient">
+					<a href="<?= base_url('') ?>post/details/5" class="h-entry v-height gradient">
 
 						<div class="featured-img" style="background-image: url('images/img_4_horizontal.jpg');"></div>
 
@@ -53,6 +53,7 @@
 						</div>
 					</a>
 				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -63,7 +64,7 @@
 
 			<div class="row mb-4">
 				<div class="col-sm-6">
-					<h2 class="posts-entry-title">Recentes</h2>
+					<h2 class="posts-entry-title">Novidades</h2>
 				</div>
 				
 			</div>

@@ -50,10 +50,10 @@
 				<div class="site-navigation">
 					<div class="row g-0 align-items-center">
 						<div class="col-2">
-							<a href="<?= base_url('')?>" class="logo m-0 float-start">News MultWin<span class="text-primary">.</span></a>
+							<a href="<?= base_url('')?>" class="logo m-0 float-start"><img src="<?=base_url('images/logo-light-system.png')?>" width="120" height="50" alt=""><span class="text-primary"></span></a>
 						</div>
 						<div class="col-8 text-center">
-							<form action="<?= base_url('')?>post/pesquisar" method="post" class="search-form d-inline-block d-lg-none">
+							<form action="details/pesquisar" method="post" class="search-form d-inline-block d-lg-none">
 								<input type="text" name="busca" id="busca" class="form-control" placeholder="Search...">
 								<span class="bi-search"></span>
 							</form>
@@ -62,7 +62,7 @@
 								<li class="active"><a href="<?= base_url('') ?>">Início</a></li>
 								<li><a href="https://www.lightsystemsoft.com.br/ls/suporte.php" target="_blank">Suporte Online</a></li>
 								<li><a href="https://www.lightsystemsoft.com.br/ls/" target="_blank">Light System</a></li>
-								<li><a href="<?= base_url('')?>contact">Contato</a></li>
+								<li><a href="<?= base_url('')?>contato">Contato</a></li>
 							</ul>
 						</div>
 						<div class="col-2 text-end">
