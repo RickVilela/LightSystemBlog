@@ -5,11 +5,7 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-	
-		
 		$data["title"] = "Admin - MultWin";
-
-		
 		$this->load->view('pages/admin', $data);
 		
 	}
@@ -26,15 +22,20 @@ class Admin extends CI_Controller {
 		
 	}
 
-	public function remove()
+	public function remove($id)
 	{
-	
 		$this->load->model("posts_model");
 
 		$data["title"] = "Edit Posts - MultWin";
-		$data["posts"] = $this->posts_model->getPosts();
+		$data["posts"] = $this->posts_model->removerPosts($id);
 		
-		$this->load->view('pages/posts-admin', $data);
-		
+		$this->load->view('pages/posts-admin', $data);	
+	}
+
+	public function fetch(){
+		if($this->input->is_ajax_request()){
+			$posts = $this->bd->getPosts();
+			echo json_encode($posts);
+		};
 	}
 }

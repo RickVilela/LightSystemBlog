@@ -21,13 +21,27 @@ $("#btnComentar").on("click", (e) =>{
                 id_post: idPost
             },
             success: function (response){
-
+                $(".comment-list").append()
 				$.ajax({
-					url: "http://localhost/news/post/getComentarios/" + idPost,
+					url: "http://localhost/news/post/details/" + idPost,
 					dataType: "json",
 					success: function (response){
 		
-						console.log(response);
+                        // response.forEach(comentario => {
+                        //     $(".comment-list").append(`
+                        //     <li class="comment">
+                        //         <div class="comment-body">
+                        //             <h3>${comentario.nome}</h3>
+                        //             <div class="meta">${comentario.data}</div>
+                        //             <p>${comentario.comentario}</p>
+                        //             <p><a href="#" class="reply rounded">Reply</a></p>
+                        //         </div>
+                        //     </li>
+                        //     `)
+                        // });
+
+                        console.log(response)
+						
 		
 					  limparCampos();
 		
@@ -36,20 +50,6 @@ $("#btnComentar").on("click", (e) =>{
 						console.log(err)
 					}
 				})
-
-
-			// console.log(response)
-
-            //     $(".comment").append(`
-            //     <div class="comment-body">
-            //         <h3>${nome}</h3>
-            //         <div class="meta"></div>
-            //         <p>${comentario}</p>
-            //         <p><a href="#" class="reply rounded">Reply</a></p>
-            //     </div>
-            //   `)
-
-            //   limparCampos();
 
             },error: function(err){
                 limparCampos()

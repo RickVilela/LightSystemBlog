@@ -14,4 +14,9 @@ class Posts_model extends CI_Model {
 		))->row_array();
 	}
 
+    public function removerPosts($id)
+	{
+		$this->db->delete('posts', array('id' => $id));
+	}
+
 }

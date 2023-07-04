@@ -64,6 +64,11 @@ class Post extends CI_Controller {
 		echo json_encode($comentarios);
 	}
 
-	
+	public function fetch($id){
+		if($this->input->is_ajax_request()){
+			$posts = $this->bd->getComentarios($id);
+			echo json_encode($posts);
+		};
+	}
 
 }

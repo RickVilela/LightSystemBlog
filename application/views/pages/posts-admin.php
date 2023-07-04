@@ -191,9 +191,9 @@
 							<td id='valor_nomeResponsavel$id'><?= $post['descricao'] ?></td>
 							<td id='valor_endereco$id'><?= $post['autor'] ?></td>
 							<td id='valor_cidade$id'><?= $post['data'] ?></td>
-							<td><button class="btn btn-success btn-sm rounded-0"  type="button" id="btn-editar" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-								<button class="btn btn-primary btn-sm rounded-0" type="button" id="btn-salvar" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-save"></i></button>
-								<button class="btn btn-danger btn-sm rounded-0" type="button" id="btn-excluir"  data-toggle="tooltip" data-placement="top" title="Delete" onclick="remover(<?=$post['id']?>)" ><i class="fa fa-trash"></i></button>
+							<td><button class="btn btn-success btn-sm rounded-0"  type="button" id="btn-editar" data-toggle="tooltip" data-placement="top" title="Edit" value="<?=$post['id']?>" ><i class="fa fa-edit" ></i></button>
+								<button class="btn btn-primary btn-sm rounded-0" type="button" id="btn-salvar" data-toggle="tooltip" data-placement="top" title="Add" value="<?=$post['id']?>" ><i class="fa fa-save"></i></button>
+								<button class="btn btn-danger btn-sm rounded-0" type="button" id="btn-excluir"  data-toggle="tooltip" data-placement="top" title="Delete" value="<?=$post['id']?>" ><i class="fa fa-trash"></i></button>
 							</td>
 						</tr>
 					<?php endforeach; ?>
