@@ -39,31 +39,31 @@
 
 
           <div class="pt-5 comment-wrap">
-            <?php if($qtdComentarios == 0){ ?>
-              <h3 class="mb-5 heading">Nenhum Comentário</h3>
-              <ul class="comment-list">
-            <?php }else if($qtdComentarios == 1){ ?>
-              <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentário</h3>
-              <ul class="comment-list">
-            <?php }else{?>
-              <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentários</h3>
-              <ul class="comment-list">
-              <?php };?>
-            <?php foreach($comentarios as $comentario) : ?>
-              <li class="comment">
-                <div class="comment-body">
-                  <h3><?=$comentario['nome'] ?></h3>
-                  <div class="meta"><?=$comentario['data'] ?></div>
-                  <p><?=$comentario['comentario'] ?></p>
-                  <p><a href="#" class="reply rounded">Reply</a></p>
-                </div>
-              </li>
-            <?php endforeach; ?>
-            </ul>
-            <!-- END comment-list -->
+					<!-- <?php if($qtdComentarios == 0){ ?>
+					<h3 class="mb-5 heading">Nenhum Comentário</h3>
+									  <ul class="comment-list">
+											  <?php }else if($qtdComentarios == 1){ ?>
+												  <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentário</h3>
+												  <ul class="comment-list">
+											  <?php }else{?>
+												  <h3 class="mb-5 heading"><?=$qtdComentarios ?> Comentários</h3>
+												  <ul class="comment-list">
+												  <?php };?>
+											  <?php foreach($comentarios as $comentario) : ?>
+												  <li class="comment">
+													  <div class="comment-body">
+														  <h3><?=$comentario['nome'] ?></h3>
+														  <div class="meta"><?=$comentario['data'] ?></div>
+														  <p><?=$comentario['comentario'] ?></p>
+														  <p><a href="#" class="reply rounded">Reply</a></p>
+													  </div>
+												  </li>
+											  <?php endforeach; ?>
+									  </ul> -->
+
 
             <div class="comment-form-wrap pt-5">
-              <h3 class="mb-5">Comentar</h3>
+              <!-- <h3 class="mb-5">Comentar</h3>
               <form action="<?= base_url() ?>post/addComentario" method="post" class="p-5 bg-light">
                 <div class="form-group">
                   <label for="name">Nome *</label>
@@ -82,7 +82,7 @@
                   <input type="submit" id="btnComentar" value="Comentar" class="btn btn-primary">
                 </div>
                 
-              </form>
+              </form> -->
             </div>
           </div>
 

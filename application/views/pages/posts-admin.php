@@ -129,8 +129,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario</span>
-                                <img class="img-profile rounded-circle"
-                                    src="./assets/img/undraw_profile.svg">
+                              
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -191,9 +190,8 @@
 							<td id='valor_nomeResponsavel$id'><?= $post['descricao'] ?></td>
 							<td id='valor_endereco$id'><?= $post['autor'] ?></td>
 							<td id='valor_cidade$id'><?= $post['data'] ?></td>
-							<td><button class="btn btn-success btn-sm rounded-0"  type="button" id="btn-editar" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-								<button class="btn btn-primary btn-sm rounded-0" type="button" id="btn-salvar" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-save"></i></button>
-								<button class="btn btn-danger btn-sm rounded-0" type="button" id="btn-excluir"  data-toggle="tooltip" data-placement="top" title="Delete" onclick="remover(<?=$post['id']?>)" ><i class="fa fa-trash"></i></button>
+							<td><button class="btn btn-success btn-sm rounded-0"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-placement="top" onclick="editar(<?=$post['id']?>)" title="Edit"><i class="fa fa-edit"></i></button>
+								<button class="btn btn-danger btn-sm rounded-0" type="button" id="btn-excluir"  data-toggle="tooltip" data-placement="top" title="Delete" onclick="remover(<?=$post['id']?>)" value="<?=$post['id']?>" ><i class="fa fa-trash"></i></button>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -205,6 +203,33 @@
 
 </div>
 <!-- /.container-fluid -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Post</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Titulo:</label>
+            <input type="text" class="form-control" id="titulo" value="">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Descricao:</label>
+			<textarea class="form-control" name="descricao" id="descricaoModal" value="teste"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="CKEDITOR.instances.descricaoModal.destroy()">Fechar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="salvar" >Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 <!-- End of Main Content -->
@@ -254,6 +279,7 @@
     <!-- Custom scripts for all pages-->
     <script src="<?=base_url('js/jquery-min.js')?>"></script>
     <script src="<?=base_url('js/actions.js')?>"></script>
+	<script src="<?=base_url('ckeditor/ckeditor.js')?>"></script>
     <script src="<?=base_url('js/sb-admin-2.min.js')?>"></script>
     
 

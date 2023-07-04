@@ -3,53 +3,53 @@
 		<div class="container">
 			<div class="row align-items-stretch retro-layout">
 				<div class="col-md-4">
-					<a href="<?= base_url('') ?>post/details/4" class="h-entry mb-30 v-height gradient" data-toggle="modal" data-src="https://www.youtube.com/embed/JJUo8Fe3_JY" data-target="#myModal">
+					<a href="http://www.lightsystemsoft.com.br/servicos/whatsapp/"  target="_blank" class="h-entry mb-30 v-height gradient" data-toggle="modal" data-src="https://www.youtube.com/embed/JJUo8Fe3_JY" data-target="#myModal">
 
-						<div class="featured-img" style="background-image: url('images/img_consulta.jfif'); background-size: contain;"></div>
+						<div class="featured-img" style="background-image: url('images/intro-mobile.png'); background-size: contain;"></div>
 
 						<div class="text">
-							<span class="date">29/06/2023</span>
-							<h2>Consultar dados do Veículo através da Placa</h2>
+							<span class="date"></span>
+							<h2>WhatsApp - Envie mensagens diretamente do Sistema!</h2>
 						</div>
 					</a>
-					<a href="<?= base_url('') ?>post/details/5" class="h-entry v-height gradient">
+					<a href="http://www.lightsystemsoft.com.br/servicos/mbackup/" target="_blank" class="h-entry v-height gradient">
 
-						<div class="featured-img" style="background-image: url('images/cenprot.svg'); background-size: contain;"></div>
+						<div class="featured-img" style="background-image: url('images/backup.jpg'); background-size: contain;"></div>
 
 						<div class="text">
-							<span class="date">29/06/2023</span>
-							<h2>Consulta grátis de Protesto em todo o Brasil</h2>
+							<span class="date"></span>
+							<h2>Mbackup - Evite a perda dos seus dados!</h2>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?= base_url('') ?>post/details/3" class="h-entry img-5 h-100 gradient">
+					<a href="https://www.lightsystemsoft.com.br/ls/suporte.php" target="_blank" class="h-entry img-5 h-100 gradient">
 
 						<div class="featured-img" style="background-image: url('images/5132329.jpg'); background-size: contain;"></div>
 
 						<div class="text">
-							<span class="date">29/06/2023</span>
+							<span class="date"></span>
 							<h2>Novo Suporte Online</h2>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="<?= base_url('') ?>post/details/4" class="h-entry mb-30 v-height gradient">
+					<a href="http://www.lightsystemsoft.com.br/servicos/pedidoweb/" target="_blank" class="h-entry mb-30 v-height gradient">
 
-						<div class="featured-img" style="background-image: url('images/img_3_horizontal.jpg');"></div>
+						<div class="featured-img" style="background-image: url('images/pedido-web.jpg');"></div>
 
 						<div class="text">
-							<span class="date">Apr. 14th, 2022</span>
-							<h2>Startup vs corporate: What job suits you best?</h2>
+							<span class="date"></span>
+							<h2>Pedido Web - Realize os Pedidos de qualquer lugar!</h2>
 						</div>
 					</a>
-					<a href="<?= base_url('') ?>post/details/5" class="h-entry v-height gradient">
+					<a href="https://www.connectmobile.com.br/" target="_blank" class="h-entry v-height gradient">
 
-						<div class="featured-img" style="background-image: url('images/img_4_horizontal.jpg');"></div>
+						<div class="featured-img" style="background-image: url('images/mobile.jpg');"></div>
 
 						<div class="text">
-							<span class="date">Apr. 14th, 2022</span>
-							<h2>Thought you loved Python? Wait until you meet Rust</h2>
+							<span class="date"></span>
+							<h2>Connect Mobile - Uma nova forma de Vender</h2>
 						</div>
 					</a>
 				</div>

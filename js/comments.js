@@ -22,35 +22,8 @@ $("#btnComentar").on("click", (e) =>{
             },
             success: function (response){
 
-				$.ajax({
-					url: "http://localhost/news/post/getComentarios/" + idPost,
-					dataType: "json",
-					success: function (response){
-		
-						console.log(response);
-		
-					  limparCampos();
-		
-					},error: function(err){
-						limparCampos()
-						console.log(err)
-					}
-				})
-
-
-			// console.log(response)
-
-            //     $(".comment").append(`
-            //     <div class="comment-body">
-            //         <h3>${nome}</h3>
-            //         <div class="meta"></div>
-            //         <p>${comentario}</p>
-            //         <p><a href="#" class="reply rounded">Reply</a></p>
-            //     </div>
-            //   `)
-
-            //   limparCampos();
-
+			
+				
             },error: function(err){
                 limparCampos()
                 console.log(err)
